@@ -1,0 +1,39 @@
+{
+  "name": "ifa-data-mgr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon index.js",
+    "start:prod": "export NODE_ENV=production && nodemon index.js",
+    "start:prod-windows": "set NODE_ENV=production && nodemon index.js",
+    "start:colo": "export NODE_ENV=colo && node index.js",
+    "start:colo-windows": "set NODE_ENV=colo && nodemon index.js",
+    "start:uat": "export NODE_ENV=uat && nodemon index.js",
+    "start:uat-windows": "set NODE_ENV=uat && nodemon index.js",
+    "start:dev": "set NODE_ENV=development && nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cassandra-driver": "^4.6.4",
+    "dotenv": "^16.0.3",
+    "kafkajs": "^2.0.2",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.4",
+    "nodemon": "^2.0.20",
+    "odata-client": "^0.7.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "dotenv-webpack": "^8.0.1",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
